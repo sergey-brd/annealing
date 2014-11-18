@@ -48,15 +48,15 @@ Data::Data(std::string name) {
 			}
 		}
 	}
-	for(int s = 0; s < _numberOfServers; s++) {
-		for(int d = 0; d < _numberOfDiscs; d++) {
+	for(int d = 0; d < _numberOfDiscs; d++) {
+		for(int s = 0; s < _numberOfServers; s++) {
 			for(int r = 0; r < _numberOfCharacteristics; r++) {
 				file>>_insertionCosts[s][d][r];
 			}
 		}
 	}
-	for(int s = 0; s < _numberOfServers; s++) {
-		for(int d = 0; d < _numberOfDiscs; d++) {
+	for(int d = 0; d < _numberOfDiscs; d++) {
+		for(int s = 0; s < _numberOfServers; s++) {
 			for(int r = 0; r < _numberOfCharacteristics; r++) {
 				file>>_ejectionCosts[s][d][r];
 			}
@@ -66,16 +66,16 @@ Data::Data(std::string name) {
 		file>>_initLocation[d];
 		_initLocation[(d)] -= 1;
 	}
-	if(file.peek() != std::ifstream::traits_type::eof()) {
+	/*if(file.peek() != std::ifstream::traits_type::eof()) {
 		for(int d = 0; d < _numberOfDiscs; d++) {
 			file>>_curLocation[d];
 			_curLocation[(d)] -= 1;
 		}
-	} else {
+	} else {*/
 		for(int d = 0; d < _numberOfDiscs; d++) {
 			_curLocation[(d)] = _initLocation[(d)];
 		}
-	}
+	//}
 	
 }
     
