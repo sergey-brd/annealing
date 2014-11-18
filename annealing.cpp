@@ -53,8 +53,8 @@ Location Annealing::find(double startingTemperature, double constCooling, Neighb
     int count = 0;
 
 	while(count < frozen) {
-        curLocation = resultLocation;
-        curObjectiveFunction = resultObjectiveFunction;
+        //curLocation = resultLocation;
+        //curObjectiveFunction = resultObjectiveFunction;
 		for(i = 0; i < length * neighborhood.getLength(); i++) {
             curLocation = neighborhood.generate(preLocation);
             curObjectiveFunction = curLocation.calc();
