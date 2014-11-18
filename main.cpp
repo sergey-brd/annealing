@@ -36,14 +36,14 @@ int main(int argc, const char * argv[]) {
 
         }
     }*/
-    Location result = Location(data);
+    //Location result = Location(data);
     
-    //Location result = annealing.find(1000, 0.97, move, 10, 2 , Location(data));
+    Location result = annealing.find(1000, 0.97, move, 10, 2 , Location(data));
     std::cout<<result.calc()<<std::endl;
-    if(result.allow()) {
+    /*if(result.allow()) {
         std::cout<<"allow"<<std::endl;
     } else {
         std::cout<<"NOTallow"<<std::endl;
-    }
+    }*/
     return 0;
 }
