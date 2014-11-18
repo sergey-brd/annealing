@@ -147,11 +147,11 @@ bool Location::allow() {
 			
 		}
 	}
-    std::cout<<"Allow calc:"<<std::endl;
+    /*std::cout<<"Allow calc:"<<std::endl;
     for(int s = 0; s < data.numberOfServers(); s++) {
         for(int r = 0; r < data.numberOfCharacteristics(); r++) {
-            //std::cout<<serverInsertion[s][r] - data.ejectionLimits(s, r)<<std::endl;
-            //std::cout<<serverEjection[s][r] - data.insertLimits(s, r)<<std::endl;
+            std::cout<<serverInsertion[s][r] - data.ejectionLimits(s, r)<<std::endl;
+            std::cout<<serverEjection[s][r] - data.insertLimits(s, r)<<std::endl;
         }
     }
 	
@@ -169,6 +169,6 @@ bool Location::allow() {
 		std::cout<<data.ejectionCosts(0, 4, r)<<std::endl;
 	}
 
-	std::cout<<"Allow calc END2"<<std::endl;
+	std::cout<<"Allow calc END2"<<std::endl;*/
     return ret;
 }
